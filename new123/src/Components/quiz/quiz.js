@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './quiz.css'
 import quizData from './quizData';
+import Navbar from './Navbar';
+
 
 function Quiz() {
 
@@ -57,7 +59,9 @@ function Quiz() {
     }
 
     return (
+        
         <div className='quiz-container'>
+            <Navbar/>
             {
                 !showResults ?
                     <>
