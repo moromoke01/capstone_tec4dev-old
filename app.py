@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 
 #load the serialized model
-model_path = 'rf_best_model.joblib'
+model_path = os.path.join('DATA', 'rf_best_model.joblib')
 loaded_model = load(model_path)
 
 
@@ -23,7 +23,7 @@ def preprocess_data(new_data):
             safe_col_name = col.replace(' ','_').replace('/','_').replace('\\','_').replace('-','_')
            
             #construct the path to the encoder file
-            encoder_path = os.path.join(f'{safe_col_name}_encoder.joblib')
+            encoder_path = os.path.join('DATA', f'{safe_col_name}_encoder.joblib')
             
             #Load the corresponding encoder
             encoder = load(encoder_path)
@@ -46,7 +46,7 @@ def predict():
     # Convert predictions to a suitable format for the response
     return jsonify(predictions.tolist())
 
-    # return jsonify({"message": "Endpoint reached successfully"})
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=False, port=port)
