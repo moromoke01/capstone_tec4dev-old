@@ -10,7 +10,6 @@ import LoginSignup from './Components/LoginSignup/LoginSignup'
 function App() {
   const router=createBrowserRouter([{
     path:'/',
-    element:<Navbar/>,
     element: <Home/>
   },
   {
