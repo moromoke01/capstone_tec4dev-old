@@ -44,7 +44,6 @@ function Quiz() {
     }
 
     const handleAnswer = (index) => {
-        // Check if an answer is already selected
         if (!clickable) {
             return; // Exit the function if an answer is already selected
         }
