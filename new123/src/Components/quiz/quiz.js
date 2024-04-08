@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import './quiz.css'
+import './quiz.css';
 import quizData from './quizData';
 import Navbar from './Navbar';
-
 
 function Quiz() {
 
@@ -13,7 +12,6 @@ function Quiz() {
     const [showResults, setShowResults] = useState(false);
     const [result, setResult] = useState(0);
     const [clickable, setClickable] = useState(true);
-
 
     const reset = () => {
         setDisplayQuestion(0);
@@ -36,6 +34,7 @@ function Quiz() {
             setResult((amountCorrect / quizData.questions.length) * 100)
         }
     }
+
     const handleBackBtn = () => {
         if (displayQuestion >= 1) {
             setDisplayQuestion(displayQuestion - 1)
@@ -45,6 +44,11 @@ function Quiz() {
     }
 
     const handleAnswer = (index) => {
+        // Check if an answer is already selected
+        if (!clickable) {
+            return; // Exit the function if an answer is already selected
+        }
+    
         if (quizData.questions[displayQuestion].correctAnswerIndex === index) {
             console.log('%cCorrect', `background-color: green`);
             setDisplayAnswer(!displayAnswer);
@@ -59,57 +63,47 @@ function Quiz() {
     }
 
     return (
-        
-        <div className='quiz-container'>
+        <div>
             <Navbar/>
-            {
-                !showResults ?
+            <div className='quiz-container'>
+                {!showResults ?
                     <>
                         <h2>Question (<span style={{ color: '#4cceac' }}>{displayQuestion + 1}</span> of {quizData.questions.length})</h2>
-
                         <div className='quiz-options'> 
                             <h2 className='question' dangerouslySetInnerHTML={{ __html: quizData.questions[displayQuestion].question }}></h2>
-                            {
-                                quizData.questions[displayQuestion].answers.map((answer, index) => {
-                                    return (
-                                        <button
-                                            key={index}
-                                            className='quiz-option-container'
-                                            disabled={!clickable}
-                                            onClick={() => handleAnswer(index)}
-                                        >
-                                            <div className="option-content">
-                                                
-                                                <h3
-                                                    style={displayAnswer && quizData.questions[displayQuestion].correctAnswerIndex === index
-                                                        ? { color: '#4cceac' }
-                                                        : displayAnswer && quizData.questions[displayQuestion].correctAnswerIndex !== index
-                                                            ? { color: '#db4f4a' }
-                                                            : null
-                                                    }
-                                                >
-                                                    {answer}
-                                                </h3>
-                                            </div>
-                                        </button>
-                                    )
-                                })
-                            }
+                            {quizData.questions[displayQuestion].answers.map((answer, index) => {
+                                return (
+                                    <button
+                                        key={index}
+                                        className='quiz-option-container'
+                                        disabled={!clickable}
+                                        onClick={() => handleAnswer(index)}
+                                    >
+                                        <div className="option-content">
+                                            <h3
+                                                style={displayAnswer && quizData.questions[displayQuestion].correctAnswerIndex === index
+                                                    ? { color: '#4cceac' }
+                                                    : displayAnswer && quizData.questions[displayQuestion].correctAnswerIndex !== index
+                                                        ? { color: '#db4f4a' }
+                                                        : null
+                                                }
+                                            >
+                                                {answer}
+                                            </h3>
+                                        </div>
+                                    </button>
+                                )
+                            })}
                         </div>
-
                         {displayAnswer && answerCorrect
                             ? <h1 style={{ color: '#4cceac' }}>Correct!</h1>
                             : displayAnswer && !answerCorrect &&
-                            <h1 style={{ color: '#db4f4a' }}>Wrong</h1>
-
-                        }
-
+                            <h1 style={{ color: '#db4f4a' }}>Wrong</h1>}
                         <div className='quiz-nav'>
                             <button onClick={handleBackBtn}><i className="fa-solid fa-arrow-left"></i>  Prev</button>
                             <button onClick={handleNextBtn}>Next  <i className="fa-solid fa-arrow-right"></i></button>
                         </div>
                     </>
-                    
                     : 
                     <div className='results-container'>
                         <h1>Results</h1>
@@ -128,9 +122,8 @@ function Quiz() {
                         <button onClick={reset}>
                             Try Again
                         </button>
-                    </div>
-
-            }
+                    </div>}
+            </div>
         </div>
     )
 }
