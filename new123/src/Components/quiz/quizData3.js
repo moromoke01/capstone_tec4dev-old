@@ -327,3 +327,4 @@ const quizData3 = [
     },
     
   ];
+  export default quizData3

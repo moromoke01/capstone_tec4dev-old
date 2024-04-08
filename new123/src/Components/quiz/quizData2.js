@@ -1,11 +1,6 @@
-const quizData2 = () => {
-    const [answers, setAnswers] = useState([]);
+import React, { useState } from 'react';
 
-    const handleAnswerSelection = (questionIndex, answerIndex, learningTracks) => {
-        const updatedAnswers = [...answers];
-        updatedAnswers[questionIndex] = { answer: answerIndex, tracks: learningTracks };
-        setAnswers(updatedAnswers);
-    };
+const QuizData2 = () => {
 
     const questions = [
         {
@@ -212,4 +207,4 @@ const quizData2 = () => {
         }
     ];
 }
-export default quizData2
+export default QuizData2

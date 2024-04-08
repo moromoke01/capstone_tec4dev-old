@@ -1,5 +1,4 @@
-import picture from "../../Assets/Picture1.jpg"
-const quizData = {
+const quizData = { 
     questions: [
         {
             question: "If a product costs $100 after a 20% discount, what was its original price?",
