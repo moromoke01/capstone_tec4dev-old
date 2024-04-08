@@ -7,7 +7,7 @@ import password_icon from '../../Assets/password.png';
 import logo from '../../Assets/logo.png';
 
 const LoginSignup = () => {
-  const [action, setAction] = useState("Sign Up");
+  const [action, setAction] = useState("Create Account");
   return (
     <div className='body'>
       <div className='container'>
@@ -38,8 +38,8 @@ const LoginSignup = () => {
         </div>
         {action==="Sign Up" ? <div></div> : <div className="forgot-password">Forgot Password? <span>Click Here!</span></div>}
         <div className="submit-container">
-          <div key="login" className={action === "Sign Up" ? "submit gray" : "submit"} onClick={() => { setAction("Login") }}>Login</div>
-          <div key="sign up" className={action === "Login" ? "submit gray" : "submit"} onClick={() => { setAction("Sign Up") }}>Sign Up</div>
+          <div key="login" className={action === "Create Account" ? "submit gray" : "submit"} onClick={() => { setAction("Login") }}>Login</div>
+          <div key="sign up" className={action === "Login" ? "submit gray" : "submit"} onClick={() => { setAction("Create Account") }}>Sign Up</div>
         </div>
         <div className='second'>
           <div><img src={logo} alt="logo" /></div>

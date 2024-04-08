@@ -4,14 +4,12 @@ import image from '../Assets/homeig.png'
 import foot_one from '../Assets/img1.jpeg'
 import foot_two from '../Assets/img2.jpeg'
 import foot_three from '../Assets/img3.jpeg'
-import Navbar from './Navbar'
 
 
 
 const Home = () => {
   return (
     <div>
-        <Navbar/>
         <div className='containerbody'>
             <h1>Lorem ipsum dolor sit amet consectetur. Enim in risus curabitur dignissim </h1>
             <h5>Lorem ipsum dolor sit amet consectetur. Enim in risus curabitur dignissim </h5>
