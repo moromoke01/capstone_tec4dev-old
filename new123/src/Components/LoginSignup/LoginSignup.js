@@ -1,52 +1,63 @@
-import React, { useState } from 'react';
-import './LoginSignup.css';
+// Import necessary dependencies
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './LoginSignup.css'; // Import CSS for styling
 
-import user_icon from '../../Assets/person.png';
-import email_icon from '../../Assets/email.png';
-import password_icon from '../../Assets/password.png';
+// Common component for input fields
+const InputField = ({ label, type, name, placeholder }) => (
+  <div>
+    <label htmlFor={name}><strong>{label}:</strong></label>
+    <input type={type} name={name} autoComplete='off' placeholder={placeholder} className='input' />
+  </div>
+);
 
-const LoginSignup = () => {
-  const [action, setAction] = useState("Sign Up");
-  return (
-    <div className='body'>
-      <div className='container'>
+// Signup form component
+const SignupForm = ({ setAction }) => (
+  <div className='body'>
+    <div className='container'>
       <div className="header">
-        <div className="text">{action}</div>
+        <div className="text">Insightify</div>
         <div className="underline"></div>
       </div>
+      <div className="signup-heading">
+        <h2>Sign up to take your career psychometric test</h2>
+      </div>
       <div className="inputs">
-        {action === "Sign Up" ? (
-          <div className="input">
-            <img src={user_icon} alt="" />
-            <input type="text" placeholder='Name' />
-            
-          </div>
-        ) : null}
-
-        <div className="input">
-          <img src={email_icon} alt="" />
-          <input type="email" placeholder='Email' />
-        </div>
-        <div className="input">
-          <img src={password_icon} alt="" />
-          <input type="password" placeholder='Password' required />
-        </div>
-        <div className="input">
-          <img src={password_icon} alt="" />
-          <input type="password" placeholder='Confirm Password' required />
-        </div>
+        <InputField label="Name" type="text" name="name" placeholder="Enter your name" />
+        <InputField label="Email" type="email" name="email" placeholder="Enter your email" />
+        <InputField label="Password" type="password" name="password" placeholder="Enter your password" />
       </div>
-      {action==="Sign Up"?<div></div>:      <div className="forgot-password">Forgot Password? <span>Click Here!</span></div>
-}
+      <div className="already-have-account">
+        Already have an account? <Link to="/signin" onClick={() => setAction("Login")}>Sign in</Link>
+      </div>
       <div className="submit-container">
-        <div key="login" className={action === "Sign Up" ? "submit gray" : "submit"} onClick={() => { setAction("Login") }}>Login</div>
-        <div key="sign up" className={action === "Login" ? "submit gray" : "submit"} onClick={() => { setAction("Sign Up") }}>Sign Up</div>
+        <button className="submit" onClick={() => {/* Handle sign up submission */}}>SIGN UP</button>
       </div>
     </div>
-    
+  </div>
+);
+
+// Signin form component
+const SigninForm = () => (
+  <div className='body'>
+    <div className='container'>
+      <div className="header">
+        <div className="text">Insightify</div>
+        <div className="underline"></div>
+      </div>
+      <div className="signin-heading">
+        <h2>Sign in to stay connected with us and continue to explore</h2>
+      </div>
+      <div className="inputs">
+        <InputField label="Email" type="email" name="email" placeholder="Enter your email" />
+        <InputField label="Password" type="password" name="password" placeholder="Enter your password" />
+      </div>
+      <div className="forgot-password">Forgot Password? <span>Click Here!</span></div>
+      <div className="submit-container">
+        <button className="submit" onClick={() => {/* Handle sign in submission */}}>SIGN IN</button>
+      </div>
     </div>
-  );
-};
+  </div>
+);
 
-
-export default LoginSignup;
+export { SignupForm, SigninForm };
