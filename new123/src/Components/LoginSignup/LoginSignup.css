@@ -17,7 +17,7 @@
   width: 400px; /* Adjusted width for better fit */
   background: #fff;
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 20px; /* Adjusted border-radius */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -36,17 +36,12 @@
   font-weight: 700;
 }
 
-.underline {
-  width: 61px;
-  height: 6px;
-  background: #9c13be;
-  border-radius: 9px;
-}
-
 /* Input fields styling */
 .inputs {
   margin-top: 30px;
   display: flex;
+  color: #9c13be;
+  font-size: 20px;
   flex-direction: column;
   gap: 20px;
 }
@@ -54,10 +49,13 @@
 .input {
   display: flex;
   align-items: center;
+  font-size: 20px;
   width: 100%;
   height: 50px; /* Adjusted height for better fit */
-  background: #eaeaea;
-  border-radius: 6px;
+  background: transparent;
+  border: none; /* Remove border */
+  border-radius: 0; /* Remove border radius */
+  border-bottom: 2px solid #9c13be; /* Add bottom border */
 }
 
 .input input {
@@ -65,21 +63,27 @@
   height: 100%;
   background: transparent;
   border: none;
-  outline: none;
+  outline: none; /* Remove default outline */
   color: #797979;
   font-size: 18px;
   padding: 0 15px; /* Adjusted padding for better fit */
 }
 
-/* Forgot password styling */
-.forgot-password {
-  margin-top: 20px;
-  color: #797979;
-  font-size: 16px;
+/* Style when input is focused */
+.input input:focus {
+  border-bottom-color: transparent; /* Remove bottom border when focused */
 }
 
-.forgot-password span {
-  color: #4c00b4;
+
+
+/* Forgot password styling */
+.forgot-password {
+  display: flex;
+  justify-content: end;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 20px;
+  color:  #9c13be;
   cursor: pointer;
 }
 
@@ -87,18 +91,18 @@
 .submit-container {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .submit {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 220px;
+  width: 200px;
   height: 50px;
   background: #9c13be;
   color: #fff;
-  border-radius: 25px;
+  border-radius: 10px;
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
@@ -112,7 +116,41 @@
 /* Heading styling */
 .signup-heading,
 .signin-heading {
-  margin-top: 20px;
+  margin-top: 10px;
   color: #7a0d92;
   text-align: center;
+}
+
+/* Agreement checkbox styling */
+.agree-checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: black;
+}
+
+.agree-checkbox input[type="checkbox"] {
+  margin-right: 6px;
+  width: 35px; /* Increased width */
+  height: 40px; /* Increased height */
+}
+
+.agree-checkbox a {
+  color:black;
+  text-decoration: none;
+}
+
+.agree-checkbox a:hover {
+  text-decoration: underline;
+}
+
+/* Already have an account link styling */
+.already-have-account {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  margin-top: 20px;
+  color: #9c13be;
+  cursor: pointer;
 }
