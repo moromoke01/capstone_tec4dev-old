@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './LoginSignup.css';
+import google from '../../Assets/Google logo.webp'
 
 // Common component for input fields
 const InputField = ({ label, type, name, placeholder }) => (
