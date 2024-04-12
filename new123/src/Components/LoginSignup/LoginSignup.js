@@ -25,6 +25,7 @@ const SignupForm = ({ setAction }) => (
         <InputField label="Name" type="text" name="name" placeholder="Enter your name" />
         <InputField label="Email" type="email" name="email" placeholder="Enter your email" />
         <InputField label="Password" type="password" name="password" placeholder="Enter your password" />
+        <div className="password-info">Add at least 8 characters and special characters</div>
       </div>
 
       {/* Checkbox for agreeing to terms */}
@@ -68,5 +69,3 @@ const SigninForm = () => (
 );
 
 export { SignupForm, SigninForm };
-
-/* LoginSignup.css */
