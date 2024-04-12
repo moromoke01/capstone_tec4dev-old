@@ -1,12 +1,11 @@
-// Import necessary dependencies
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './LoginSignup.css'; // Import CSS for styling
+import './LoginSignup.css';
 
 // Common component for input fields
 const InputField = ({ label, type, name, placeholder }) => (
   <div>
-    <label htmlFor={name}><strong>{label}:</strong></label>
+    <label htmlFor={name}><strong>{label}</strong></label>
     <input type={type} name={name} autoComplete='off' placeholder={placeholder} className='input' />
   </div>
 );
@@ -67,4 +66,5 @@ const SigninForm = () => (
     </div>
   </div>
 );
+
 export { SignupForm, SigninForm };
