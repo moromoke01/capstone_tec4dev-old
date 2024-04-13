@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #f5f0ff; /* Light purple background color */
 }
 
@@ -35,6 +35,19 @@
   color: #9c13be;
   font-size: 32px;
   font-weight: 700;
+}
+
+/* Increase font size of h4 */
+h4 {
+  font-size: 20px; /* Adjust font size as needed */
+}
+
+/* Heading styling */
+.signup-heading,
+.signin-heading {
+  margin-top: 10px;
+  color: #7a0d92;
+  text-align: center;
 }
 
 /* Input fields styling */
@@ -84,8 +97,8 @@
 
 .divider {
   flex: 1; /* Make the divider flex to take available space */
-  height: 1px; /* Adjust height as needed */
-  background-color: gray; /* Color of the divider lines */
+  height: 2px; /* Adjust height as needed */
+  background-color: rgba(128, 128, 128, 0.391); /* Color of the divider lines */
 }
 
 .or-text {
@@ -100,6 +113,7 @@
   justify-content: flex-end; /* Corrected alignment */
   font-size: 20px;
   font-weight: 600;
+  text-decoration: underline;
   margin-top: 20px;
   color: #9c13be;
   cursor: pointer;
@@ -123,20 +137,13 @@
   border-radius: 10px;
   font-size: 18px;
   font-weight: 700;
+  border-color: transparent;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .submit:hover {
   background: #7a0d92;
-}
-
-/* Heading styling */
-.signup-heading,
-.signin-heading {
-  margin-top: 10px;
-  color: #7a0d92;
-  text-align: center;
 }
 
 /* Password info styling */
@@ -151,20 +158,20 @@
 .agree-checkbox {
   display: flex;
   align-items: center;
-  margin-top: 20px;
-  font-size: 14px;
-  color: black;
+  margin-top: 5px; /* Reduce margin-top */
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.742); /* Change link color to purple */
 }
 
 .agree-checkbox input[type="checkbox"] {
   border: 2px solid black; /* Border thickness */
-  margin-right: 8px;
+  margin-right: 2px;
   width: 35px; /* Increased width */
-  height: 30px; /* Increased height */
+  height: 25px; /* Increased height */
 }
 
 .agree-checkbox a {
-  color: black; /* Change link color to purple */
+  color: rgba(0, 0, 0, 0.742); /* Change link color to purple */
   text-decoration: none;
 }
 
@@ -224,5 +231,9 @@
   width: 40px; /* Adjust size as needed */
   height: 40px; /* Adjust size as needed */
   margin: 0 10px; /* Adjust spacing between logos */
+}
+
+.icon-link:hover .external-logo {
+  opacity: 0.8; /* Reduce opacity on hover */
 }
 
