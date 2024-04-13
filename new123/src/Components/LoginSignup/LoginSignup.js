@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './LoginSignup.css';
-import googleIcon from '../../Assets/Google logo.webp';
-import outlookIcon from '../../Assets/Outlook.com_icon_(2012-2019).svg 1.png';
 
 const InputField = ({ label, type, name, placeholder }) => (
   <div>
