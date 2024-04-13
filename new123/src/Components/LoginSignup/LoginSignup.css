@@ -98,7 +98,7 @@ h4 {
 .divider {
   flex: 1; /* Make the divider flex to take available space */
   height: 2px; /* Adjust height as needed */
-  background-color: rgba(128, 128, 128, 0.391); /* Color of the divider lines */
+  background-color: rgba(128, 128, 128, 0.391); /* changed Color of the divider lines */
 }
 
 .or-text {
