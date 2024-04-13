@@ -78,7 +78,7 @@ const SigninForm = () => (
       <div className="forgot-password">Forgot Password?</div>
 
       <div className="submit-container">
-        <button className="submit" onClick={() => {/* Handle sign in submission */}}>SIGN IN</button>
+        <button className="submit" onClick={() => {/*sign in submission */}}>SIGN IN</button>
       </div>
 
       {/* Divider and OR text */}
