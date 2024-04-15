@@ -25,7 +25,8 @@ const VerificationPage = () => {
           <div className="underline"></div>
         </div>
         <div className="verification-heading">
-          <h4>Enter the 6-digit code sent to your email genesiseemmanuella@gmail.com</h4>
+          <h4>Enter the 6-digit code sent to <br/>
+             <br/> genesiseemmanuella@gmail.com</h4>
         </div>
 
         {/* Verification code boxes */}
