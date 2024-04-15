@@ -5,9 +5,18 @@ import image from '../Assets/homeig.png';
 import foot_one from '../Assets/img1.jpeg';
 import foot_two from '../Assets/img2.jpeg';
 import foot_three from '../Assets/img3.jpeg';
+import Freq from './FAQ/freq';
+import logo from '../Assets/logo.png'
 
 const Home = () => {
-  const progress = 80; // Set your progress here
+  const progress = 80; 
+  function getRandomPosition() {
+    const maxX = window.innerWidth - 100; // Maximum x-coordinate
+    const maxY = window.innerHeight - 100; // Maximum y-coordinate
+    const randomX = Math.random() * maxX; // Random x-coordinate
+    const randomY = Math.random() * maxY; // Random y-coordinate
+    return { left: randomX, top: randomY }; // Return object with left and top properties
+  }
 
   return (
     <div>
@@ -152,13 +161,40 @@ const Home = () => {
         </div>
     </div>
      </div>
-     <div className='faq-item'>
+     
+       <div className='frequent'>
+        <div className='faq-item'>
           <h3>Frequently Asked Questions</h3>
-          <p>You can take the test by clicking on the "Take Test" button on our homepage.</p>
+          <Freq/>
+          <div>
+            <h3>For Support, write us @</h3>
+          </div>
         </div>
-        {/* Add more FAQ items as needed */}
-    
-      <span></span>
+        
+        </div>
+      <div className='second-tolast'>
+         <div>
+          <h1>Go On A Journey Of <br/>Self-Discovery With Us</h1>
+          <div><button className='but' ><a href='/quiz'>Take a Test Now</a></button></div>
+     
+          <img src={foot_one} className='one'/>
+         <img src={foot_two} className='otwo'/>
+         <img src={foot_three} className='othree'/>
+         <img src={foot_one} className='ofour' />
+        
+       </div>
+      
+      </div>
+      <div className='last'>
+        <img src={logo}/>
+        <ul>
+           <li><a href=''>Home</a></li>
+           <li><a href=''>About</a></li>
+           <li><a href=''>Pricing</a></li>
+           <li><a href=''>Blog</a></li>
+           <li><a href=''>Contact</a></li>
+        </ul>
+      </div>
     </div>
   );
 }
