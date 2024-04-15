@@ -6,6 +6,7 @@ import Result from './Components/Result';
 import Home from './Components/Home';
 import Quiz from './Components/quiz/quiz';
 import { SignupForm, SigninForm } from './Components/LoginSignup/LoginSignup';
+import VerificationPage from './Components/LoginSignup/Verification';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/signin" element={<SigninPage />} />
+          <Route path="/verify" element={<VerificationPage />} />
           <Route path="/terms" element={<Terms/>} />
         </Routes>
       </Router>
@@ -27,14 +29,12 @@ function App() {
 const SignupPage = () => (
   <>
     <SignupForm className="signup-heading" />
-    {}
   </>
 );
 
 const SigninPage = () => (
   <>
     <SigninForm className="signin-heading" />
-    {/* Navbar is not included here */}
   </>
 );
 
