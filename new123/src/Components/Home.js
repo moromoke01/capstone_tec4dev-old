@@ -29,6 +29,8 @@ const Home = () => {
         <div className='gh'></div>
         <div className='gh'></div>
       </div>
+     
+      <div className='layer-two'>
       <footer>
         <div className='dofooter'>
           <span><img src={foot_one} alt="Footer Image 1" /></span>
@@ -49,7 +51,7 @@ const Home = () => {
           <i className="fa-solid fa-star"></i>
         </div>
       </footer>
-      <div className='layer-two'></div>
+      </div>
       <div className='two'>
         <h1 id='about'>About Insightify</h1>
       </div>
@@ -143,12 +145,8 @@ const Home = () => {
        <div className='frequent'>
         <div className='faq-item'>
           <h3>Frequently Asked Questions</h3>
-          <Freq/>
-          <div>
-            <h3>For Support, write us @</h3>
-          </div>
         </div>
-        
+        <Freq/>
         </div>
       <div className='second-tolast'>
          <div>

@@ -43,10 +43,9 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
   padding: 10px 20px;
+  background-color: #757373;
 }
 
 .dofooter img {
@@ -68,12 +67,6 @@ footer {
 .stars {
   display: flex;
   justify-content: flex-end;
-}
-
-.layer-two {
-  width: 100%;
-  background-color: #808080;
-  padding: 20px;
 }
 
 .but {
@@ -123,28 +116,7 @@ footer {
   font-size: 20px; /* Adjust font size of content */
 }
 
-.progress-container {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  border-radius: 50%;
-  background-color: #f0f0f0;
-}
 
-.progress-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  clip: rect(0, 100px, 200px, 0);
-}
-
-.progress-bar.green {
-  background-color: green;
-  clip: rect(0, 100px, 200px, 0);
-}
 
 .nextone {
   margin: 5px;
@@ -271,7 +243,6 @@ display: flex;
   gap: 40%;
   font-size: 30px;
   flex-direction: row;
-
 }
 .last ul{
   display: flex;
