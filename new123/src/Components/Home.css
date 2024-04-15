@@ -113,47 +113,27 @@ footer {
   line-height: 1.5;
 }
 
-.con {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-}
-
-.prog {
-  text-align: center;
-}
-
-.prog h3 {
-  font-size: 20px;
-  margin-bottom: 5px;
-}
-
-.prog h2 {
-  font-size: 28px;
-  margin-bottom: 5px;
-}
-
-.prog h4 {
-  font-size: 16px;
-  margin-bottom: 0;
-}
-
-.bar {
-  width: 150px;
-  height: 150px;
+.progress-container {
+  width: 200px;
+  height: 200px;
   position: relative;
-  margin-left: 30px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
 }
 
-.fill {
+.progress-bar {
   position: absolute;
   top: 0;
   left: 0;
-  width: 0;
+  width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #ccc;
+  clip: rect(0, 100px, 200px, 0);
+}
+
+.progress-bar.green {
+  background-color: green;
+  clip: rect(0, 100px, 200px, 0);
 }
 
 .nextone {
@@ -280,10 +260,33 @@ display: flex;
   display: flex;
   gap: 40%;
   font-size: 30px;
+  flex-direction: row;
+
 }
 .last ul{
   display: flex;
   text-decoration: none;
   gap: 40px;
   list-style-type: none;
+}
+@media screen and (max-width: 768px) {
+  .last {
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .last img {
+    margin-bottom: 10px; /* Add some space between logo and list on small screens */
+  }
+
+  .last ul {
+    flex-direction: row;
+    text-align: center;
+    font-size: 9px;
+  }
+
+  .last li {
+    margin: 5px 0; /* Adjust the spacing between list items for small screens */
+  }
 }

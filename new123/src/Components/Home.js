@@ -74,28 +74,6 @@ const Home = () => {
         </div>
        </div>
 
-        
-        <div className='con'>
-          <div className='prog'>
-            <h3>Your Score</h3>
-            <h2>{progress}%</h2>
-            <h4>Input Score</h4>
-          </div>
-          <div className='bar'>
-            <div className='fill' style={{ 
-             marginTop: '40px' ,
-              width: `${progress}%`,
-              height: '100%',
-              borderRadius: '50%',
-              backgroundColor: progress >= 80 ? '#00FF00' : '#ccc', 
-              clip: 'rect(0, 100px, 100px, 50px)',
-              position: 'absolute',
-              transformOrigin: '0% 50%',
-              transform: `rotate(${(progress / 100) * 360}deg)`,
-              transition: 'width 1s ease-in-out, transform 1s ease-in-out'
-            }}></div>
-          </div>
-        </div>
       </span>
      <div className='nextone'>
         <div><h3>Join Insightify for getting  proven results</h3></div>
@@ -183,9 +161,9 @@ const Home = () => {
          <img src={foot_one} className='ofour' />
         
        </div>
-      
+       
       </div>
-      <div className='last'>
+      <div className="last">
         <img src={logo}/>
         <ul>
            <li><a href=''>Home</a></li>
