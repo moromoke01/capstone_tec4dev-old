@@ -165,7 +165,7 @@ footer {
 }
 
 .nextone h3 {
-  margin: auto;
+  margin: auto 35%;
 }
 
 .changes {
@@ -227,4 +227,63 @@ footer {
 .stars {
   color: gold;
   font-size: 20px;
+}
+.frequent{
+gap: 7%
+}
+.second-tolast{
+  background: conic-gradient(from 32.78deg at 32.07% 54.51%, #090909 -199.79deg, #0B0B0B 106.47deg, #525252 114.54deg, #6E6E6E 155.73deg, #090909 160.21deg, #0B0B0B 466.47deg);
+height: 350px;
+color: #ccc;
+display: flex;
+}
+.second-tolast h1{
+  margin: auto 20px;
+  padding-top: 6%;
+}
+.second-tolast .but{
+  margin : 50px;
+}
+.second-tolast {
+  position: relative;
+}
+
+.ofour {
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%; 
+  position: absolute; 
+  margin-left: 70%;
+}
+.othree{
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%; 
+  position: absolute;
+  margin-left: 50%;
+}
+.otwo{
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%; 
+  position: absolute;
+  margin-left: 30%;
+}
+.one{
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%; 
+  position: absolute;
+  margin-left: 90%;
+}
+.last{
+  display: flex;
+  gap: 40%;
+  font-size: 30px;
+}
+.last ul{
+  display: flex;
+  text-decoration: none;
+  gap: 40px;
+  list-style-type: none;
 }
