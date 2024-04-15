@@ -55,26 +55,26 @@ const Home = () => {
       </div>
 
       <span className='par'>
-       <div>
-       <div className="paral">
-          <h2>Our Mission</h2>
-          <h4>Our mission at Insightify is simple yet profound: <br/>to empower individuals like you to thrive in the fast-paced and dynamic field of technology.<br/> We are committed to providing you with the tools, resources, and insights needed to excel<br/> in your tech career and achieve your professional goals. <br/></h4>
-        </div>
+  <div className="card-container">
+    <div className="paral">
+      <h2>Our Mission</h2>
+      <h4>Our mission at Insightify is simple yet profound: <br/>to empower individuals like you to thrive in the fast-paced and dynamic field of technology.<br/> We are committed to providing you with the tools, resources, and insights needed to excel<br/> in your tech career and achieve your professional goals. <br/></h4>
+    </div>
 
-        <div className="paral">
-          <h2>Our Commitment to Excellence</h2>
-          <h4>At Insightify, excellence is not just a goal; it's our standard. We are dedicated to upholding the  <br/>
-          highest standards of quality, integrity, and professionalism in everything we do. Whether you're a  <br/>seasoned tech professional looking to level up your skills or a newcomer eager to break into the <br/>industry, Insightify is here to support you every step of the way.</h4>
-        </div>
+    <div className="paral">
+      <h2>Our Commitment to Excellence</h2>
+      <h4>At Insightify, excellence is not just a goal; it's our standard. We are dedicated to upholding the  <br/>
+      highest standards of quality, integrity, and professionalism in everything we do. Whether you're a  <br/>seasoned tech professional looking to level up your skills or a newcomer eager to break into the <br/>industry, Insightify is here to support you every step of the way.</h4>
+    </div>
 
-        <div className="paral">
-          <h2>Lorem ipsum</h2>
-          <h4>Lorem ipsum dolor sit amet consectetur. Porta ut pretium aliquet sed placerat <br/>
-              Lorem ipsum dolor sit amet consectetur. Porta ut pretium aliquet sed placerat <br/>venenatis purus. Habitasse et blandit.</h4>
-        </div>
-       </div>
+    <div className="paral">
+      <h2>Lorem ipsum</h2>
+      <h4>Lorem ipsum dolor sit amet consectetur. Porta ut pretium aliquet sed placerat <br/>
+          Lorem ipsum dolor sit amet consectetur. Porta ut pretium aliquet sed placerat <br/>venenatis purus. Habitasse et blandit.</h4>
+    </div>
+  </div>
+</span>
 
-      </span>
      <div className='nextone'>
         <div><h3>Join Insightify for getting  proven results</h3></div>
         <div className='changes'>

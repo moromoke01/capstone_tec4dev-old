@@ -98,19 +98,29 @@ footer {
   margin-top: 40px;
 }
 
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .paral {
-  margin-bottom: 30px;
-  text-align: center;
+  width: 450px; /* Adjust the width of each card */
+  margin: 20px; /* Adjust the spacing between cards */
+  padding: 20px;
+  border: 1px solid #ccc; /* Add border to simulate card */
+  border-radius: 8px; /* Add border radius for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 410px;
 }
 
 .paral h2 {
-  font-size: 24px;
+  font-size: 50px;
   margin-bottom: 10px;
 }
 
 .paral h4 {
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 20px; /* Adjust font size of content */
 }
 
 .progress-container {
