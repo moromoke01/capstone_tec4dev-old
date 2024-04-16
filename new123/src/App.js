@@ -9,6 +9,25 @@ import { SignupForm, SigninForm } from './Components/LoginSignup/LoginSignup';
 import VerificationPage from './Components/LoginSignup/Verification';
 
 function App() {
+  const router=createBrowserRouter([{
+    path:'/',
+    element:<Navbar/>,
+    element: <Home/>
+  },
+  {
+    path: '/result',
+    element: <Result/>
+  },
+  {
+    path:'/quiz',
+    
+    element: <Quiz/>
+  },
+  {
+    path:'/signup',
+    element: <LoginSignup/>
+  }
+])
   return (
     <div className="App">
       <Router>
