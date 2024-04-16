@@ -7,10 +7,6 @@ import Home from './Components/Home';
 import Quiz from './Components/quiz/quiz';
 import { SignupForm, SigninForm } from './Components/LoginSignup/LoginSignup';
 import VerificationPage from './Components/LoginSignup/Verification';
-import Signup from './Components/LoginSignup/Signup';
-import Login from './Components/LoginSignup/Login';
-import TestMainPage from './Components/quiz/psychometricTest/TestMainPage';
-import TestIntroPage from './Components/quiz/psychometricTest/TestIntroPage';
 
 function App() {
   return (
@@ -24,10 +20,6 @@ function App() {
           <Route path="/signin" element={<SigninPage />} />
           <Route path="/verify" element={<VerificationPage />} />
           <Route path="/terms" element={<Terms/>} />
-          <Route path="/TestMainPage" element={<TestMainPage/>} />
-          <Route path="/TestIntroPage" element={<TestIntroPage/>} />
-          <Route path="/login" element={<Login/>} />
-          <Route path="/signup" element={<Signup/>} />
         </Routes>
       </Router>
     </div>

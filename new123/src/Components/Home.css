@@ -45,7 +45,6 @@ footer {
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px 20px;
-  background-color: #757373;
 }
 
 .dofooter img {
@@ -96,26 +95,31 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
 }
-
+.par{
+  display: flex;
+}
 .paral {
-  width: 450px; /* Adjust the width of each card */
+  width: 750px; /* Adjust the width of each card */
   margin: 20px; /* Adjust the spacing between cards */
   padding: 20px;
   border: 1px solid #ccc; /* Add border to simulate card */
   border-radius: 8px; /* Add border radius for rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 410px;
+  height: 280px;
+  
 }
 
-.paral h2 {
-  font-size: 50px;
-  margin-bottom: 10px;
+.score{
+  margin: auto 8%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0.1, 0.1);
+  border-radius: 10px;
+  width: 200px;
+  border: 1px solid #ccc; /* Add border to simulate card */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-.paral h4 {
-  font-size: 20px; /* Adjust font size of content */
-}
-
 
 
 .nextone {
