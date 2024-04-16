@@ -1,19 +1,12 @@
 import React from 'react';
-import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import './Components/Nav/Navbar'
+import Terms from './Components/terms';
 import Result from './Components/Result';
-import Navbar from './Components/Nav/Navbar';
-import Home from './Components/Home'
+import Home from './Components/Home';
 import Quiz from './Components/quiz/quiz';
-import Signup from './Components/LoginSignup/Signup';
-import Login from './Components/LoginSignup/Login';
-import TestMainPage from './Components/quiz/psychometricTest/TestMainPage';
-// import CognitiveQue from './Components/quiz/psychometricTest/CognitiveQue';
-import PersonalityTrait from './Components/quiz/psychometricTest/PersonalityTrait';
-// import CreativityQue from './Components/quiz/psychometricTest/CreativityQue';
-// import Aptitude from './Components/quiz/psychometricTest/AptitudeQue';
-// import SkillQue from './Components/quiz/psychometricTest/SkillQue';
+import { SignupForm, SigninForm } from './Components/LoginSignup/LoginSignup';
+import VerificationPage from './Components/LoginSignup/Verification';
 
 function App() {
   const router=createBrowserRouter([{
@@ -32,42 +25,36 @@ function App() {
   },
   {
     path:'/signup',
-    element: <Signup/>
-  },
-  {
-    path:'/login',
-    element: <Login/>
-  },
-  {
-    path:'/TestMainPage',
-    element: <TestMainPage/>
-  },
-  // {
-  //   path:'/CognitiveQue',
-  //   element: <CognitiveQue/>
-  // },
-  {
-    path:'/PersonalityTrait',
-    element: <PersonalityTrait/>
-  },
-  // {
-  //   path:'/Aptitude',
-  //   element: <Aptitude/>
-  // },
-  // {
-  //   path:'/CreativityQue',
-  //   element: <CreativityQue/>
-  // },{
-  //   path:'/SkillQue',
-  //   element: <SkillQue/>
-  // }
-  
+    element: <LoginSignup/>
+  }
 ])
   return (
     <div className="App">
-      <RouterProvider router={router}/>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/result" element={<Result />} />
+          <Route path="/quiz" element={<Quiz />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/signin" element={<SigninPage />} />
+          <Route path="/verify" element={<VerificationPage />} />
+          <Route path="/terms" element={<Terms/>} />
+        </Routes>
+      </Router>
     </div>
   );
 }
+
+const SignupPage = () => (
+  <>
+    <SignupForm className="signup-heading" />
+  </>
+);
+
+const SigninPage = () => (
+  <>
+    <SigninForm className="signin-heading" />
+  </>
+);
 
 export default App;
