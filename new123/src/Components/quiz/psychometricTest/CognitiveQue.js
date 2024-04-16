@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import logo from '../../../Assets/logo.png'
 import "./testStyle.css";
 
 const CognitiveQuestions = () => {
   const [cognitiveAbilityQuestions, setCognitiveAbilityQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState('');
+  const [answeredQuestions, setAnsweredQuestions] = useState([]);
 
   useEffect(() => {
     // Fetch cognitive ability questions from the backend
@@ -53,7 +55,26 @@ const CognitiveQuestions = () => {
 
   return (
     <div className="quiz-container">
-      <h1>Cognitive Ability Questions</h1>
+             <div className="header">
+         <img src ={logo} style={{width:150}} alt="logo"/>
+         <h4><b>Section A:Cognitive Ability Questions</b></h4>
+
+         <span>
+          <b>59:49</b>
+          <button>End Assessment</button></span>
+       </div>
+
+      <div className='pagination'>
+        {cognitiveAbilityQuestions.map((question, index) => (
+          <div
+              key={index}
+              className={`pagination-circle ${answeredQuestions[index] ? 'answered' : 'unanswered'}`}  onClick={() => setCurrentQuestionIndex(index)}>
+
+                {index + 1}
+              </div>
+        ))}
+      </div>
+      
       <div className="questions">
         {currentQuestion && (
           <div className="question">
