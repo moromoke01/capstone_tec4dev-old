@@ -7,13 +7,14 @@ import foot_two from '../Assets/img2.jpeg';
 import foot_three from '../Assets/img3.jpeg';
 import Freq from './FAQ/freq';
 import logo from '../Assets/logo.png'
+import RoundProgressBar from './progressbar/progress'
 
 const Home = () => {
   const progress = 80; 
   function getRandomPosition() {
-    const maxX = window.innerWidth - 100; // Maximum x-coordinate
-    const maxY = window.innerHeight - 100; // Maximum y-coordinate
-    const randomX = Math.random() * maxX; // Random x-coordinate
+    const maxX = window.innerWidth - 100; 
+    const maxY = window.innerHeight - 100; 
+    const randomX = Math.random() * maxX; 
     const randomY = Math.random() * maxY; // Random y-coordinate
     return { left: randomX, top: randomY }; // Return object with left and top properties
   }
@@ -57,7 +58,7 @@ const Home = () => {
       </div>
 
       <span className='par'>
-  <div className="card-container">
+  <div className="card-container1">
     <div className="paral">
       <h2>Our Mission</h2>
       <h4>Our mission at Insightify is simple yet profound: <br/>to empower individuals like you to thrive in the fast-paced and dynamic field of technology.<br/> We are committed to providing you with the tools, resources, and insights needed to excel<br/> in your tech career and achieve your professional goals. <br/></h4>
@@ -74,6 +75,9 @@ const Home = () => {
       <h4>Lorem ipsum dolor sit amet consectetur. Porta ut pretium aliquet sed placerat <br/>
           Lorem ipsum dolor sit amet consectetur. Porta ut pretium aliquet sed placerat <br/>venenatis purus. Habitasse et blandit.</h4>
     </div>
+  </div>
+  <div className='score'><h2>Your Score <i class="fa-solid fa-arrow-right"></i></h2>
+  <RoundProgressBar/>
   </div>
 </span>
 

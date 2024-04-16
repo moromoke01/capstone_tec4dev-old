@@ -7,6 +7,7 @@ import Home from './Components/Home';
 import Quiz from './Components/quiz/quiz';
 import { SignupForm, SigninForm } from './Components/LoginSignup/LoginSignup';
 import VerificationPage from './Components/LoginSignup/Verification';
+import Blog from './Components/blog/blog'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/signin" element={<SigninPage />} />
           <Route path="/verify" element={<VerificationPage />} />
           <Route path="/terms" element={<Terms/>} />
+          <Route path="/blog" element={<Blog/>}/>
         </Routes>
       </Router>
     </div>
