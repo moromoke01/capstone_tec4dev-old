@@ -10,6 +10,25 @@ import VerificationPage from './Components/LoginSignup/Verification';
 import Blog from './Components/blog/blog'
 
 function App() {
+  const router=createBrowserRouter([{
+    path:'/',
+    element:<Navbar/>,
+    element: <Home/>
+  },
+  {
+    path: '/result',
+    element: <Result/>
+  },
+  {
+    path:'/quiz',
+    
+    element: <Quiz/>
+  },
+  {
+    path:'/signup',
+    element: <LoginSignup/>
+  }
+])
   return (
     <div className="App">
       <Router>
