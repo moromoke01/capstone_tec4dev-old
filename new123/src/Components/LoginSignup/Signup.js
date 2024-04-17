@@ -96,6 +96,7 @@ const Signup = () => {
       <div className="inputs">
 
         <div className="input">
+          <label>Email Address</label>
         <img src={user_icon} alt="" />
           <input type="text"
                  name="fname"
